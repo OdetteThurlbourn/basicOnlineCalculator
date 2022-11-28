@@ -116,4 +116,10 @@ button {
         margin: 0;
     }
     
+    #calculator {
+        clear: both;
+        width: 100%;
+        float: left;
+        padding: 0;
+    }
 }
