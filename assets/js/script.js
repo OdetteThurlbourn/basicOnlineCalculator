@@ -1,7 +1,9 @@
 /** Assign a values to the operations, numbers etc. using
  *  a const variable - note const variables cannot be reassigned 
- * Credit to 'Anil' from CODEPEN - help me define my const variables
-*/
+ */
+
+//Credit to 'Anil' from CODEPEN - help me define my const variables
+
 
 const operators = document.querySelectorAll("operator");
 const numbers = document.querySelectorAll("number");
@@ -15,8 +17,10 @@ const digits = display.innerText.length;
 
 /**  Using the parseFloat function to ensure the 
  * string returned is passed as a float value
- * Credit to 'Anil' from CODEPEN & lesson on 'Methods for numbers'
-*/
+ */
+
+//Credit to 'Anil' from CODEPEN & lesson on 'Methods for numbers'
+
 
 function add(a, b) {
     return parseFloat(a) + parseFloat(b);
@@ -34,12 +38,76 @@ function multiply(a, b) {
     return parseFloat(a) * parseFloat(b);
 }
 
-/* if/else else/if statements 
-*With the help of 'Love Maths' project
-*/
+// if/else else/if statements 
+//With the help of 'Love Maths' project
+
 
 function operate(a, b, operator) {
     if (operator === "add") {
         return add(a, b);
-    } else if (operator ===)
+    } else if (operator === "subtract") {
+        return subtract(a, b);
+    } else if (operator === "divide") {
+//.toFixed to the 5th decimal point
+        return divide(a, b).toFixed(5);
+    } else if (operator === "multiply") {
+        return multiply(a, b);
+    } else {
+        return null;
+    }
+}
+
+// Define 'let' variables
+
+let currentOperator = null;
+let firstNum = null;
+let secondNum = null;
+let resetScreen = false;
+let result = null;
+
+// EventListeners for numbers and operators elements
+// Credit to W3School and CODEPEN
+
+numbers.forEach((number) => {
+    number.addEventListener("click", (e) => {
+      if (resetScreen) {
+        clearScreen();
+      }
+      displayNumber(e.target.innerText);
+      resetScreen = false;
+    });
+  });
+
+  operators.forEach((operator) => {
+    operator.addEventListener("click", (e) => {
+      setOperand(showNumber());
+      setTheOperator(e.target.id);
+      resetScreen = true;
+    });
+  });
+  
+  calculate.addEventListener("click", () => {
+    result = calculateResult();
+    clearScreen();
+    if (result) {
+      displayNumber(result);
+    }
+  });
+
+  clear.addEventListener("click", () => {
+    clearAllValues();
+  });
+  
+  backSpace.addEventListener("click", deleteNumber);
+  decimal.addEventListener("click", displayDecimal);
+  sign.addEventListener("click", displaySign);
+  
+// Display funtion
+
+function displayNumber(number) {
+    display.innerText += number;
+}
+
+function showNumber() {
+    return display.innerText;
 }
