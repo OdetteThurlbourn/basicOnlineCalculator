@@ -69,8 +69,14 @@ button {
     cursor: pointer;
 }
 
+
+/* Button specific style rules */
 #addition {
     height: 150px;
+}
+
+.delete  {
+    font-size: 1em;
 }
 
 
