@@ -23,7 +23,7 @@ body {
 }
 
 
-/* Calculator and button style rules */
+/* div main-container style rules */
 
 #calculator {
     min-height: 80vh;
@@ -31,14 +31,18 @@ body {
     justify-content: center;
     align-items: center;
     align-content: center;
-    background-color: aquamarine;
+    background-color: #41BEAC;
 }
 .main-container {
-    position: relative;
+    background-color: #4153BE;
     display: grid;
     grid-template-columns: repeat(4, 125px);
     grid-template-rows: repeat(6, 80px);
     border: 10px solid black;
+    border-radius: 6px;
+    position: relative;
+    grid-template-columns: repeat(4, 125px);
+    grid-template-rows: repeat(6, 80px); 
     border-radius: 6px;
     box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25),
     10px 10px 70px rgba(0, 0, 0, 0.25), inset -5px -5px 15px rgba(0, 0, 0, 0.25),
@@ -47,13 +51,12 @@ body {
 
 /* Button style rules */
 button {
-    color: blueviolet;
-    position: relative;
-    display: grid;
-    width: 80px;
-    place-items: center;
-    margin: 8px;
-    height: 80px;
+    font-family: Nunito, sans-serif;
+    font-size: 2.5em;
+    font-weight: bolder;
+    color: black;
+    margin: 4px;
+    border-radius: 50%;
     background: linear-gradient(180deg, green, orange);
     box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15),
     inset 0 -8px 8px rgba(0, 0, 0, 0.25), 0 0 0 2px rgba(0, 0, 0, 0.75),
@@ -64,19 +67,21 @@ button {
     border-radius: 10px;
 }
 
+
+
 /* Screen/diplay style rules */
 
 .display {
-    background-color: red;
+    background-color: #f2f1f2;
     font-family: Nunito, sans-serif;
     display: flex;
     font-size: 3em;
-    color: white;
+    color: black;
     grid-column: 1 / 5;
     justify-content: flex-end;
     border-radius: 4px;
     padding-right: 8px;
-    margin: 4px;
+    margin: 1px;
 }
 
 
