@@ -122,4 +122,8 @@ button {
         float: left;
         padding: 0;
     }
+
+    .footer {
+        float: left;
+    }
 }
