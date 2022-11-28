@@ -54,6 +54,20 @@ button {
     border-radius: 10px;
 }
 
+/* Screen/diplay style rules */
+
+.display {
+    background-color: red;
+    font-family: Nunito, sans-serif;
+    display: flex;
+    font-size: 3em;
+    color: white;
+    grid-column: 1 / 5;
+    justify-content: flex-end;
+    border-radius: 4px;
+    padding-right: 8px;
+    margin: 4px;
+}
 
 
 /* Styling of footer element */
