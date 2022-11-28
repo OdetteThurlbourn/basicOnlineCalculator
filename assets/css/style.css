@@ -12,6 +12,16 @@ body {
     background-color: #4192BE;
 }
 
+/* Heading style rules */
+#heading{
+    font-family: Nunito, sans-serif;
+    text-decoration: none;
+    text-align: center;
+    font-size: 2.5rem;
+    letter-spacing: 4px;
+    margin-top: 1em;
+}
+
 
 /* Calculator and button style rules */
 
