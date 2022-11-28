@@ -107,13 +107,13 @@ button {
     text-align: justify;
 }
 
-/* Media Queries for large to medium screens - 1200px wide */
+/* Media Queries */
+
 
 @media screen and (max-width: 1200px) {
     #heading {
         width: 100%;
         height: 100px;
-        margin: 0;
     }
     
     #calculator {
@@ -127,3 +127,41 @@ button {
         float: left;
     }
 }
+
+/* Media Queries for medium to small screens 950px */
+
+
+@media screen and (max-width:950px) {
+        #heading {
+            width: 100%;
+            height: 100px;
+        }
+        
+        #calculator {
+            clear: both;
+            width: 100%;
+            float: left;
+            padding: 0;
+        }
+    
+        .footer {
+            float: left;
+        }
+    }
+
+/* Media Queries for small screens 390px */
+
+@media screen and (min-width: 390) {
+    #heading {
+        width: 50%;
+        height: 80px;
+    }
+
+    #calculator {
+        width: 50%;
+        float: left;
+        padding: 0;
+    }
+    
+}
+    
